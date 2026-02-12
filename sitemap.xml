@@ -1,15 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://tovis.com.au/</loc>
+    <loc>https://tovis-aus.github.io/TOVIS/</loc>
     <lastmod>2026-02-12</lastmod>
   </url>
   <url>
-    <loc>https://tovis.com.au/products.html</loc>
+    <loc>https://tovis-aus.github.io/TOVIS/about.html</loc>
     <lastmod>2026-02-12</lastmod>
   </url>
   <url>
-    <loc>https://tovis.com.au/parts.html</loc>
+    <loc>https://tovis-aus.github.io/TOVIS/products.html</loc>
+    <lastmod>2026-02-12</lastmod>
+  </url>
+  <url>
+    <loc>https://tovis-aus.github.io/TOVIS/parts.html</loc>
     <lastmod>2026-02-12</lastmod>
   </url>
 </urlset>
