@@ -1,41 +1,83 @@
 /* Minimal, fast, SEO-friendly styling (no frameworks) */
 :root { --max: 1100px; }
+
 * { box-sizing: border-box; }
+
 html, body { margin: 0; padding: 0; }
+
 body {
   font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
   line-height: 1.55;
   color: #111;
   background: #fff;
 }
+
 a { color: inherit; text-decoration: underline; }
 a:hover { text-decoration-thickness: 3px; }
+
 header { border-bottom: 1px solid #eee; }
+
 .container { max-width: var(--max); margin: 0 auto; padding: 18px 16px; }
-.brand {
-  display: flex; align-items: center; gap: 14px; flex-wrap: wrap;
-}
+
+.brand { display: flex; align-items: center; gap: 14px; flex-wrap: wrap; }
 .brand img { height: 64px; width: auto; display: block; }
 .brand .tagline { font-size: 0.95rem; color: #444; }
+
 nav { margin-top: 12px; }
 nav a { margin-right: 14px; text-decoration: none; font-weight: 600; }
 nav a[aria-current="page"] { text-decoration: underline; }
 
 main h1 { font-size: 1.8rem; margin: 18px 0 8px; }
 main h2 { font-size: 1.25rem; margin: 26px 0 8px; }
+
 small, .muted { color: #555; }
 
 .grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-  gap: 10px;
+  gap: 16px; /* more space between cards in grid */
 }
+
+/* Card (grey box) */
 .card {
   border: 1px solid #eee;
   border-radius: 10px;
   padding: 12px;
+  background: #fafafa;
 }
-.list-clean { margin: 0; padding-left: 18px; }
+
+/* ✅ Add space between stacked grey cards */
+main > .card,
+main section.card {
+  margin-bottom: 16px;
+}
+
+/* Avoid double spacing inside grid (grid already uses gap) */
+.grid .card {
+  margin-bottom: 0;
+}
+
+/* ✅ Change dots to ticks (only for list-clean lists) */
+.list-clean {
+  list-style: none;     /* remove dots */
+  margin: 0;
+  padding-left: 0;      /* remove indent */
+}
+
+.list-clean li {
+  position: relative;
+  padding-left: 26px;   /* room for tick */
+  margin: 6px 0;
+}
+
+.list-clean li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  top: 0;
+  font-weight: 800;
+}
+
 .anchor-index { columns: 2; column-gap: 22px; }
 @media (max-width: 640px) { .anchor-index { columns: 1; } }
 
