@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://tovis.com.au/sitemap.xml
+Sitemap: https://tovis-aus.github.io/TOVIS/sitemap.xml
