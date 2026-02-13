@@ -17,11 +17,15 @@ a:hover { text-decoration-thickness: 3px; }
 
 header { border-bottom: 1px solid #eee; }
 
-.container { max-width: var(--max); margin: 0 auto; padding: 18px 16px; }
+.container {
+  max-width: var(--max);
+  margin: 0 auto;
+  padding: 18px 16px;
+}
 
-.brand { display: flex; align-items: center; gap: 14px; flex-wrap: wrap; }
+/* Logo-only brand */
+.brand { display: flex; align-items: center; }
 .brand img { height: 64px; width: auto; display: block; }
-.brand .tagline { font-size: 0.95rem; color: #444; }
 
 nav { margin-top: 12px; }
 nav a { margin-right: 14px; text-decoration: none; font-weight: 600; }
@@ -35,7 +39,7 @@ small, .muted { color: #555; }
 .grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-  gap: 16px; /* more space between cards in grid */
+  gap: 16px;
 }
 
 /* Card (grey box) */
@@ -46,27 +50,25 @@ small, .muted { color: #555; }
   background: #fafafa;
 }
 
-/* ✅ Add space between stacked grey cards */
+/* Space between stacked cards (About page etc.) */
 main > .card,
 main section.card {
-  margin-bottom: 16px;
+  margin: 0 0 16px 0;
 }
 
 /* Avoid double spacing inside grid (grid already uses gap) */
-.grid .card {
-  margin-bottom: 0;
-}
+.grid .card { margin-bottom: 0; }
 
-/* ✅ Change dots to ticks (only for list-clean lists) */
+/* Dots -> ticks (only for list-clean lists) */
 .list-clean {
-  list-style: none;     /* remove dots */
+  list-style: none;
   margin: 0;
-  padding-left: 0;      /* remove indent */
+  padding-left: 0;
 }
 
 .list-clean li {
   position: relative;
-  padding-left: 26px;   /* room for tick */
+  padding-left: 26px;
   margin: 6px 0;
 }
 
@@ -78,7 +80,15 @@ main section.card {
   font-weight: 800;
 }
 
+/* Model index columns */
 .anchor-index { columns: 2; column-gap: 22px; }
 @media (max-width: 640px) { .anchor-index { columns: 1; } }
 
 footer { border-top: 1px solid #eee; margin-top: 28px; }
+
+/* OPTIONAL: For bigger “TOVIS” and higher position inside a card.
+   Use in about.html: <h2 class="section-title">TOVIS</h2> */
+.section-title {
+  font-size: 1.6rem;
+  margin: 0 0 10px 0; /* remove top margin so it sits higher */
+}
