@@ -4,60 +4,98 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-  <title>Contact</title>
-  <meta name="description" content="Contact TOVIS Australia for genuine parts supply and technical support across Australia & New Zealand." />
+  <title>TOVIS Australia | Genuine Parts & Technical Support</title>
+  <meta name="description" content="TOVIS Australia supplies genuine parts and technical support for regulated gaming venues across Australia and New Zealand." />
+  <link rel="canonical" href="https://tovis.com.au/" />
 
-  <link rel="canonical" href="https://tovis-aus.github.io/TOVIS/" />
-
-  <meta property="og:title" content="Contact" />
-  <meta property="og:description" content="Contact TOVIS Australia for genuine parts supply and technical support across Australia & New Zealand." />
-  <meta property="og:url" content="https://tovis-aus.github.io/TOVIS/" />
+  <meta property="og:title" content="TOVIS Australia | Genuine Parts & Technical Support" />
+  <meta property="og:description" content="Genuine parts, reliable supply, and technical support for gaming monitor systems." />
+  <meta property="og:url" content="https://tovis.com.au/" />
   <meta property="og:type" content="website" />
 
-  <link rel="stylesheet" href="assets/css/styles.css" />
-  <link rel="icon" href="assets/images/tovis-australia-logo.jpg" />
-</head>
+  <link rel="stylesheet" href="assets/styles.css" />
 
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"Organization",
+    "name":"TOVIS Australia",
+    "url":"https://tovis.com.au/",
+    "description":"Genuine parts supply and technical support for regulated gaming venues across Australia and New Zealand."
+  }
+  </script>
+</head>
 <body>
   <header>
-    <div class="container">
-      <div class="brand">
-        <img src="assets/images/tovis-australia-logo.jpg" alt="TOVIS Australia logo" />
-      </div>
-
-      <nav aria-label="Primary">
+    <div class="container nav">
+      <a class="brand" href="./">
+        <span class="badge" aria-hidden="true"></span>
+        <strong>TOVIS Australia</strong>
+      </a>
+      <nav class="navlinks" aria-label="Primary navigation">
+        <a href="./">Home</a>
+        <a href="parts.html">Parts & Models</a>
         <a href="about.html">About</a>
-        <a href="index.html" aria-current="page">Contact</a>
-        <a href="products.html">Products</a>
-        <a href="parts.html">Parts</a>
       </nav>
     </div>
   </header>
 
   <main class="container">
-    <h1>Contact</h1>
-
-    <section class="card">
-      <h2 class="section-title">Email</h2>
+    <section class="hero">
+      <h1>Genuine parts & technical support for gaming monitor systems</h1>
       <p>
-        <a href="mailto:info@displayaid.com.au">info@displayaid.com.au</a>
+        We support regulated venues and service partners with trusted supply, reliable inventory processes,
+        and practical troubleshooting support.
       </p>
+      <div class="cta">
+        <a class="btn primary" href="parts.html#models">Search Model Codes</a>
+        <a class="btn" href="parts.html">View Parts</a>
+      </div>
+      <div class="kv">
+        <span class="pill">Genuine Parts</span>
+        <span class="pill">Reliable Supply</span>
+        <span class="pill">Compliance Mindset</span>
+        <span class="pill">Technical Support</span>
+      </div>
     </section>
 
-    <section class="card">
-      <h2 class="section-title">Service Area</h2>
-      <p>Australia &amp; New Zealand</p>
-    </section>
+    <div class="grid">
+      <section class="card span6">
+        <h2>What we do</h2>
+        <p>
+          Supply genuine parts, support fault diagnosis, and help your team minimise downtime across monitor and display systems.
+        </p>
+      </section>
+
+      <section class="card span6">
+        <h2>Fast model lookup</h2>
+        <p>
+          Model codes are listed as plain text and anchored for quick navigation and indexing.
+        </p>
+        <div class="cta">
+          <a class="btn" href="parts.html#models">Go to Model List</a>
+        </div>
+      </section>
+
+      <section class="card span12">
+        <h2>Important</h2>
+        <p class="muted small">
+          Internal links are written as <strong>relative paths</strong> (example: <code>href="parts.html"</code>).
+          This prevents GitHub Pages 404 errors.
+        </p>
+      </section>
+    </div>
   </main>
 
   <footer>
-    <div class="container">
-      <div class="muted">© TOVIS Australia • <span id="year"></span></div>
+    <div class="container footerline">
+      <span>© <span id="y"></span> TOVIS Australia</span>
+      <span class="small">Serving Australia & New Zealand</span>
     </div>
   </footer>
 
   <script>
-    document.getElementById("year").textContent = new Date().getFullYear();
+    document.getElementById("y").textContent = new Date().getFullYear();
   </script>
 </body>
 </html>
