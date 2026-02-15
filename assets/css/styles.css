@@ -1,4 +1,46 @@
-/* ===== Header layout (logo + nav) ===== */
+/* ===== Base reset ===== */
+*{box-sizing:border-box}
+html,body{margin:0;padding:0}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+
+/* ===== Theme ===== */
+:root{
+  --bg:#f6f8fb;
+  --surface:#ffffff;
+  --text:#0f172a;
+  --muted:#475569;
+  --border:#e5e7eb;
+  --border2:#d1d5db;
+  --shadow: 0 10px 24px rgba(15, 23, 42, 0.08);
+  --radius:14px;
+  --max:1100px;
+}
+
+/* ===== Typography ===== */
+body{
+  font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
+  background:var(--bg);
+  color:var(--text);
+  line-height:1.6;
+  font-size:16px;
+}
+
+.container{
+  max-width:var(--max);
+  margin:0 auto;
+  padding:0 18px;
+}
+
+.muted{color:var(--muted)}
+.small{font-size:.95rem}
+
+/* ===== Header ===== */
+header{
+  background:var(--surface);
+  border-bottom:1px solid var(--border);
+}
+
 header .container{
   display:flex;
   align-items:center;
@@ -7,60 +49,193 @@ header .container{
   padding:14px 0;
 }
 
-/* Make logo reasonably small */
-header .brand img{
-  max-height:64px;   /* change to 56px if you want smaller */
-  height:auto;
+.brand a{display:inline-flex;align-items:center;gap:10px}
+.brand img{
+  height:54px;           /* logo size control */
   width:auto;
-  display:block;
 }
 
-/* Nav spacing + nicer look */
-header nav{
+nav[aria-label="Primary"]{
   display:flex;
   align-items:center;
-  gap:18px;          /* space between About / Parts / Contact */
+  gap:18px;
   flex-wrap:wrap;
 }
 
-header nav a{
-  text-decoration:none;
+nav[aria-label="Primary"] a{
+  font-weight:700;
+  color:var(--muted);
   padding:8px 10px;
-  border-radius:10px;
-  font-weight:600;
-  letter-spacing:0.2px;
+  border-radius:12px;
+  border:1px solid transparent;
 }
 
-header nav a:hover{
-  background: rgba(255,255,255,0.08);
+nav[aria-label="Primary"] a:hover{
+  color:var(--text);
+  background:#f1f5f9;
+  border-color:var(--border);
 }
 
-/* Highlight current page */
-header nav a[aria-current="page"]{
-  background: rgba(255,255,255,0.12);
+nav[aria-label="Primary"] a[aria-current="page"]{
+  color:var(--text);
+  background:#eef2ff;
+  border-color:#c7d2fe;
 }
 
-/* ===== Typography improvements ===== */
+/* ===== Page headings ===== */
 h1{
-  font-size: clamp(2rem, 3vw, 2.8rem);
-  font-weight: 800;
-  margin: 18px 0 10px;
+  font-size: clamp(2.0rem, 3.2vw, 2.8rem);
+  letter-spacing:-0.02em;
+  line-height:1.15;
+  margin:22px 0 10px;
+  font-weight:900;
+}
+
+.lead{
+  margin:0 0 18px;
+  color:var(--muted);
+  max-width:75ch;
+}
+
+/* ===== Section Cards (thin gray boxes) ===== */
+.card{
+  background:var(--surface);
+  border:1px solid var(--border);
+  border-radius:var(--radius);
+  box-shadow: var(--shadow);
+  padding:18px;
+  margin:14px 0;
 }
 
 .section-title{
-  font-size: 1.35rem;
-  font-weight: 800;
+  margin:0 0 10px;
+  font-size:1.25rem;
+  font-weight:900;
+  letter-spacing:-0.01em;
 }
 
-/* Optional: nicer lists */
-.list-clean li{
-  margin: 6px 0;
+.hr{
+  height:1px;
+  background:var(--border);
+  margin:14px 0;
 }
 
-/* Optional: value proposition formatting */
-.value-prop li strong{
+/* ===== Sub-boxes inside each card ===== */
+.subgrid{
+  display:grid;
+  grid-template-columns: 1fr;
+  gap:12px;
+  margin-top:10px;
+}
+@media(min-width: 860px){
+  .subgrid{grid-template-columns: 1fr 1fr;}
+}
+
+.subbox{
+  border:1px solid var(--border);
+  border-radius:12px;
+  background:#fbfdff;
+  padding:14px;
+}
+
+.subbox h3{
+  margin:0 0 6px;
+  font-size:1.02rem;
+  font-weight:900;
+}
+
+.subbox p{margin:0;color:var(--text)}
+.subbox .muted{margin-top:6px}
+
+/* ===== Lists ===== */
+.list-clean{
+  list-style:none;
+  padding:0;
+  margin:0;
+}
+.list-clean li{margin:6px 0}
+
+/* Numbered list that looks professional */
+.pro-ol{
+  counter-reset:item;
+  list-style:none;
+  padding:0;
+  margin:0;
+  display:grid;
+  grid-template-columns:1fr;
+  gap:10px;
+}
+@media(min-width: 860px){
+  .pro-ol{grid-template-columns:1fr 1fr;}
+}
+.pro-ol li{
+  display:flex;
+  gap:12px;
+  align-items:flex-start;
+  padding:12px;
+  border:1px solid var(--border);
+  border-radius:12px;
+  background:#fbfdff;
+}
+.pro-ol li::before{
+  counter-increment:item;
+  content: counter(item);
+  min-width:32px;
+  height:32px;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  border-radius:999px;
+  border:1px solid var(--border2);
+  background:#ffffff;
+  font-weight:900;
+}
+
+/* Value Proposition list */
+.vp{
+  list-style:none;
+  padding:0;
+  margin:0;
+  display:grid;
+  grid-template-columns:1fr;
+  gap:10px;
+}
+.vp li{
+  padding:12px;
+  border:1px solid var(--border);
+  border-radius:12px;
+  background:#fbfdff;
+}
+.vp strong{
   display:block;
-  font-size: 1.05rem;
-  font-weight: 800;
-  margin-bottom: 2px;
+  font-weight:900;
+  margin-bottom:4px;
+}
+
+/* Clients chips */
+.chips{
+  display:flex;
+  flex-wrap:wrap;
+  gap:10px;
+  margin:0;
+  padding:0;
+  list-style:none;
+}
+.chips li{
+  padding:8px 12px;
+  border:1px solid var(--border);
+  border-radius:999px;
+  background:#fbfdff;
+  font-weight:800;
+  color:#111827;
+}
+
+/* Footer */
+footer{
+  margin-top:26px;
+  border-top:1px solid var(--border);
+  background:var(--surface);
+}
+footer .container{
+  padding:16px 18px;
 }
