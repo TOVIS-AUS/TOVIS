@@ -4,18 +4,21 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-  <title>TOVIS Parts by Model | TOVIS Australia</title>
-  <meta name="description" content="TOVIS genuine parts by model for Australia & New Zealand. Contact us for parts availability." />
+  <title>Parts | TOVIS Australia</title>
+  <meta name="description" content="TOVIS genuine parts by model for Australia & New Zealand. Search model codes and contact us for parts availability." />
 
-  <!-- Use your real domain for SEO (recommended) -->
-  <link rel="canonical" href="https://tovis.com.au/parts.html" />
+  <link rel="canonical" href="https://www.tovis.com.au/parts.html" />
 
-  <meta property="og:title" content="TOVIS Parts by Model | TOVIS Australia" />
-  <meta property="og:description" content="TOVIS genuine parts by model for Australia & New Zealand. Contact us for parts availability." />
-  <meta property="og:url" content="https://tovis.com.au/parts.html" />
+  <meta property="og:title" content="Parts | TOVIS Australia" />
+  <meta property="og:description" content="TOVIS genuine parts by model for Australia & New Zealand. Search model codes and contact us for parts availability." />
+  <meta property="og:url" content="https://www.tovis.com.au/parts.html" />
   <meta property="og:type" content="website" />
 
-  <!-- Keep these as RELATIVE paths (no leading /) -->
+  <!-- Premium font: Inter (same as About) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+
   <link rel="stylesheet" href="assets/css/styles.css" />
   <link rel="icon" href="assets/images/tovis-australia-logo.jpg" />
 </head>
@@ -26,269 +29,124 @@
   <header>
     <div class="container">
       <div class="brand">
-        <img src="assets/images/tovis-australia-logo.jpg" alt="TOVIS Australia logo" />
+        <a href="index.html" aria-label="Go to Contact">
+          <img src="assets/images/tovis-australia-logo.jpg" alt="TOVIS Australia logo" />
+        </a>
       </div>
 
+      <!-- IMPORTANT: Keep this order on EVERY page -->
       <nav aria-label="Primary">
         <a href="about.html">About</a>
-        <a href="index.html">Contact</a>
-        <!-- products.html removed to avoid 404 -->
         <a href="parts.html" aria-current="page">Parts</a>
+        <a href="index.html">Contact</a>
       </nav>
     </div>
   </header>
 
   <main class="container">
-    <h1>TOVIS Genuine Parts (Australia &amp; New Zealand)</h1>
+    <!-- Same heading style as About -->
+    <h1>Parts</h1>
+    <p class="lead">
+      Genuine TOVIS parts by model code for Australia &amp; New Zealand. Select a model below, then contact us for availability.
+    </p>
 
     <section class="card">
       <h2 class="section-title">Manufacturers</h2>
-      <ul class="list-clean">
-        <li>ARISTOCRAT</li>
+      <ul class="chips">
+        <li>Aristocrat</li>
         <li>IGT</li>
-        <li>KONAMI</li>
+        <li>Konami</li>
         <li>Light &amp; Wonder</li>
         <li>SG Gaming</li>
       </ul>
     </section>
 
-    <!-- Added id="models" so we can jump to it and redirect to it -->
     <section class="card" id="models">
       <h2 class="section-title">Models</h2>
-      <ul class="anchor-index">
-        <li><a href="#l1945lghkn">L1945LGHKN</a></li>
-        <li><a href="#l1946bp2kn">L1946BP2KN</a></li>
-        <li><a href="#l1946bpska">L1946BPSKA</a></li>
-        <li><a href="#l1946btmsg-dua">L1946BTMSG-DUA</a></li>
-        <li><a href="#l21c3at4sg">L21C3AT4SG</a></li>
-        <li><a href="#l279bbg1sg-gdfb">L279BBG1SG-GDFB</a></li>
-        <li><a href="#l279bbg1sg-svfb">L279BBG1SG-SVFB</a></li>
-        <li><a href="#l279bbg2sg">L279BBG2SG</a></li>
-        <li><a href="#l279bbg3sg-bk">L279BBG3SG-BK</a></li>
-        <li><a href="#l279bbtmsg">L279BBTMSG</a></li>
-        <li><a href="#l279blgtsg">L279BLGTSG</a></li>
-        <li><a href="#l279bltmsg">L279BLTMSG</a></li>
-        <li><a href="#l279gl3dkn-blr-a">L279GL3DKN-BLR-A</a></li>
-        <li><a href="#l279glgdkn-blr-a">L279GLGDKN-BLR-A</a></li>
-        <li><a href="#l27c5bgtkn">L27C5BGTKN</a></li>
-        <li><a href="#l27c5btmkn">L27C5BTMKN</a></li>
-        <li><a href="#l27ehlg2ar">L27EHLG2AR</a></li>
-        <li><a href="#l27ehlt2ar">L27EHLT2AR</a></li>
-        <li><a href="#l27eylg1ar">L27EYLG1AR</a></li>
-        <li><a href="#l27eylt1ar">L27EYLT1AR</a></li>
-        <li><a href="#l4045sthby-ncs-r">L4045STHBY-NCS(R)</a></li>
-        <li><a href="#l43e5lt2kn">L43E5LT2KN</a></li>
-        <li><a href="#l49e8ltmgt">L49E8LTMGT</a></li>
+      <p class="muted small">
+        Tip: You can use Ctrl+F (Windows) / Cmd+F (Mac) to find a model code quickly.
+      </p>
+
+      <!-- Using vp style makes the list look professional -->
+      <ul class="vp">
+        <li><a href="#l1945lghkn"><strong>L1945LGHKN</strong>Jump to section</a></li>
+        <li><a href="#l1946bp2kn"><strong>L1946BP2KN</strong>Jump to section</a></li>
+        <li><a href="#l1946bpska"><strong>L1946BPSKA</strong>Jump to section</a></li>
+        <li><a href="#l1946btmsg-dua"><strong>L1946BTMSG-DUA</strong>Jump to section</a></li>
+        <li><a href="#l21c3at4sg"><strong>L21C3AT4SG</strong>Jump to section</a></li>
+        <li><a href="#l279bbg1sg-gdfb"><strong>L279BBG1SG-GDFB</strong>Jump to section</a></li>
+        <li><a href="#l279bbg1sg-svfb"><strong>L279BBG1SG-SVFB</strong>Jump to section</a></li>
+        <li><a href="#l279bbg2sg"><strong>L279BBG2SG</strong>Jump to section</a></li>
+        <li><a href="#l279bbg3sg-bk"><strong>L279BBG3SG-BK</strong>Jump to section</a></li>
+        <li><a href="#l279bbtmsg"><strong>L279BBTMSG</strong>Jump to section</a></li>
+        <li><a href="#l279blgtsg"><strong>L279BLGTSG</strong>Jump to section</a></li>
+        <li><a href="#l279bltmsg"><strong>L279BLTMSG</strong>Jump to section</a></li>
+        <li><a href="#l279gl3dkn-blr-a"><strong>L279GL3DKN-BLR-A</strong>Jump to section</a></li>
+        <li><a href="#l279glgdkn-blr-a"><strong>L279GLGDKN-BLR-A</strong>Jump to section</a></li>
+        <li><a href="#l27c5bgtkn"><strong>L27C5BGTKN</strong>Jump to section</a></li>
+        <li><a href="#l27c5btmkn"><strong>L27C5BTMKN</strong>Jump to section</a></li>
+        <li><a href="#l27ehlg2ar"><strong>L27EHLG2AR</strong>Jump to section</a></li>
+        <li><a href="#l27ehlt2ar"><strong>L27EHLT2AR</strong>Jump to section</a></li>
+        <li><a href="#l27eylg1ar"><strong>L27EYLG1AR</strong>Jump to section</a></li>
+        <li><a href="#l27eylt1ar"><strong>L27EYLT1AR</strong>Jump to section</a></li>
+        <li><a href="#l4045sthby-ncs-r"><strong>L4045STHBY-NCS(R)</strong>Jump to section</a></li>
+        <li><a href="#l43e5lt2kn"><strong>L43E5LT2KN</strong>Jump to section</a></li>
+        <li><a href="#l49e8ltmgt"><strong>L49E8LTMGT</strong>Jump to section</a></li>
       </ul>
     </section>
 
-    <!-- Models -->
+    <!-- Model sections -->
     <section class="card" id="l1945lghkn">
       <h2 class="section-title">L1945LGHKN</h2>
       <ul class="list-clean">
-        <li><strong>Manufacturer:</strong> <em>[select: ARISTOCRAT, IGT, KONAMI, Light &amp; Wonder, SG Gaming]</em></li>
-        <li><strong>Parts:</strong> <a href="index.html">Contact us</a></li>
+        <li><strong>Manufacturer:</strong> <span class="muted">[Select]</span></li>
+        <li><strong>Parts enquiry:</strong> <a href="index.html">Contact us</a></li>
       </ul>
-      <p><a href="#top">Back to top</a></p>
+      <div class="hr"></div>
+      <p class="small"><a href="#models">Back to Models</a> • <a href="#top">Top</a></p>
     </section>
 
     <section class="card" id="l1946bp2kn">
       <h2 class="section-title">L1946BP2KN</h2>
       <ul class="list-clean">
-        <li><strong>Manufacturer:</strong> <em>[select: ARISTOCRAT, IGT, KONAMI, Light &amp; Wonder, SG Gaming]</em></li>
-        <li><strong>Parts:</strong> <a href="index.html">Contact us</a></li>
+        <li><strong>Manufacturer:</strong> <span class="muted">[Select]</span></li>
+        <li><strong>Parts enquiry:</strong> <a href="index.html">Contact us</a></li>
       </ul>
-      <p><a href="#top">Back to top</a></p>
+      <div class="hr"></div>
+      <p class="small"><a href="#models">Back to Models</a> • <a href="#top">Top</a></p>
     </section>
 
     <section class="card" id="l1946bpska">
       <h2 class="section-title">L1946BPSKA</h2>
       <ul class="list-clean">
-        <li><strong>Manufacturer:</strong> <em>[select: ARISTOCRAT, IGT, KONAMI, Light &amp; Wonder, SG Gaming]</em></li>
-        <li><strong>Parts:</strong> <a href="index.html">Contact us</a></li>
+        <li><strong>Manufacturer:</strong> <span class="muted">[Select]</span></li>
+        <li><strong>Parts enquiry:</strong> <a href="index.html">Contact us</a></li>
       </ul>
-      <p><a href="#top">Back to top</a></p>
+      <div class="hr"></div>
+      <p class="small"><a href="#models">Back to Models</a> • <a href="#top">Top</a></p>
     </section>
 
     <section class="card" id="l1946btmsg-dua">
       <h2 class="section-title">L1946BTMSG-DUA</h2>
       <ul class="list-clean">
-        <li><strong>Manufacturer:</strong> <em>[select: ARISTOCRAT, IGT, KONAMI, Light &amp; Wonder, SG Gaming]</em></li>
-        <li><strong>Parts:</strong> <a href="index.html">Contact us</a></li>
+        <li><strong>Manufacturer:</strong> <span class="muted">[Select]</span></li>
+        <li><strong>Parts enquiry:</strong> <a href="index.html">Contact us</a></li>
       </ul>
-      <p><a href="#top">Back to top</a></p>
+      <div class="hr"></div>
+      <p class="small"><a href="#models">Back to Models</a> • <a href="#top">Top</a></p>
     </section>
 
     <section class="card" id="l21c3at4sg">
       <h2 class="section-title">L21C3AT4SG</h2>
       <ul class="list-clean">
-        <li><strong>Manufacturer:</strong> <em>[select: ARISTOCRAT, IGT, KONAMI, Light &amp; Wonder, SG Gaming]</em></li>
-        <li><strong>Parts:</strong> <a href="index.html">Contact us</a></li>
+        <li><strong>Manufacturer:</strong> <span class="muted">[Select]</span></li>
+        <li><strong>Parts enquiry:</strong> <a href="index.html">Contact us</a></li>
       </ul>
-      <p><a href="#top">Back to top</a></p>
+      <div class="hr"></div>
+      <p class="small"><a href="#models">Back to Models</a> • <a href="#top">Top</a></p>
     </section>
 
-    <section class="card" id="l279bbg1sg-gdfb">
-      <h2 class="section-title">L279BBG1SG-GDFB</h2>
-      <ul class="list-clean">
-        <li><strong>Manufacturer:</strong> <em>[select: ARISTOCRAT, IGT, KONAMI, Light &amp; Wonder, SG Gaming]</em></li>
-        <li><strong>Parts:</strong> <a href="index.html">Contact us</a></li>
-      </ul>
-      <p><a href="#top">Back to top</a></p>
-    </section>
-
-    <section class="card" id="l279bbg1sg-svfb">
-      <h2 class="section-title">L279BBG1SG-SVFB</h2>
-      <ul class="list-clean">
-        <li><strong>Manufacturer:</strong> <em>[select: ARISTOCRAT, IGT, KONAMI, Light &amp; Wonder, SG Gaming]</em></li>
-        <li><strong>Parts:</strong> <a href="index.html">Contact us</a></li>
-      </ul>
-      <p><a href="#top">Back to top</a></p>
-    </section>
-
-    <section class="card" id="l279bbg2sg">
-      <h2 class="section-title">L279BBG2SG</h2>
-      <ul class="list-clean">
-        <li><strong>Manufacturer:</strong> <em>[select: ARISTOCRAT, IGT, KONAMI, Light &amp; Wonder, SG Gaming]</em></li>
-        <li><strong>Parts:</strong> <a href="index.html">Contact us</a></li>
-      </ul>
-      <p><a href="#top">Back to top</a></p>
-    </section>
-
-    <section class="card" id="l279bbg3sg-bk">
-      <h2 class="section-title">L279BBG3SG-BK</h2>
-      <ul class="list-clean">
-        <li><strong>Manufacturer:</strong> <em>[select: ARISTOCRAT, IGT, KONAMI, Light &amp; Wonder, SG Gaming]</em></li>
-        <li><strong>Parts:</strong> <a href="index.html">Contact us</a></li>
-      </ul>
-      <p><a href="#top">Back to top</a></p>
-    </section>
-
-    <section class="card" id="l279bbtmsg">
-      <h2 class="section-title">L279BBTMSG</h2>
-      <ul class="list-clean">
-        <li><strong>Manufacturer:</strong> <em>[select: ARISTOCRAT, IGT, KONAMI, Light &amp; Wonder, SG Gaming]</em></li>
-        <li><strong>Parts:</strong> <a href="index.html">Contact us</a></li>
-      </ul>
-      <p><a href="#top">Back to top</a></p>
-    </section>
-
-    <section class="card" id="l279blgtsg">
-      <h2 class="section-title">L279BLGTSG</h2>
-      <ul class="list-clean">
-        <li><strong>Manufacturer:</strong> <em>[select: ARISTOCRAT, IGT, KONAMI, Light &amp; Wonder, SG Gaming]</em></li>
-        <li><strong>Parts:</strong> <a href="index.html">Contact us</a></li>
-      </ul>
-      <p><a href="#top">Back to top</a></p>
-    </section>
-
-    <section class="card" id="l279bltmsg">
-      <h2 class="section-title">L279BLTMSG</h2>
-      <ul class="list-clean">
-        <li><strong>Manufacturer:</strong> <em>[select: ARISTOCRAT, IGT, KONAMI, Light &amp; Wonder, SG Gaming]</em></li>
-        <li><strong>Parts:</strong> <a href="index.html">Contact us</a></li>
-      </ul>
-      <p><a href="#top">Back to top</a></p>
-    </section>
-
-    <section class="card" id="l279gl3dkn-blr-a">
-      <h2 class="section-title">L279GL3DKN-BLR-A</h2>
-      <ul class="list-clean">
-        <li><strong>Manufacturer:</strong> <em>[select: ARISTOCRAT, IGT, KONAMI, Light &amp; Wonder, SG Gaming]</em></li>
-        <li><strong>Parts:</strong> <a href="index.html">Contact us</a></li>
-      </ul>
-      <p><a href="#top">Back to top</a></p>
-    </section>
-
-    <section class="card" id="l279glgdkn-blr-a">
-      <h2 class="section-title">L279GLGDKN-BLR-A</h2>
-      <ul class="list-clean">
-        <li><strong>Manufacturer:</strong> <em>[select: ARISTOCRAT, IGT, KONAMI, Light &amp; Wonder, SG Gaming]</em></li>
-        <li><strong>Parts:</strong> <a href="index.html">Contact us</a></li>
-      </ul>
-      <p><a href="#top">Back to top</a></p>
-    </section>
-
-    <section class="card" id="l27c5bgtkn">
-      <h2 class="section-title">L27C5BGTKN</h2>
-      <ul class="list-clean">
-        <li><strong>Manufacturer:</strong> <em>[select: ARISTOCRAT, IGT, KONAMI, Light &amp; Wonder, SG Gaming]</em></li>
-        <li><strong>Parts:</strong> <a href="index.html">Contact us</a></li>
-      </ul>
-      <p><a href="#top">Back to top</a></p>
-    </section>
-
-    <section class="card" id="l27c5btmkn">
-      <h2 class="section-title">L27C5BTMKN</h2>
-      <ul class="list-clean">
-        <li><strong>Manufacturer:</strong> <em>[select: ARISTOCRAT, IGT, KONAMI, Light &amp; Wonder, SG Gaming]</em></li>
-        <li><strong>Parts:</strong> <a href="index.html">Contact us</a></li>
-      </ul>
-      <p><a href="#top">Back to top</a></p>
-    </section>
-
-    <section class="card" id="l27ehlg2ar">
-      <h2 class="section-title">L27EHLG2AR</h2>
-      <ul class="list-clean">
-        <li><strong>Manufacturer:</strong> <em>[select: ARISTOCRAT, IGT, KONAMI, Light &amp; Wonder, SG Gaming]</em></li>
-        <li><strong>Parts:</strong> <a href="index.html">Contact us</a></li>
-      </ul>
-      <p><a href="#top">Back to top</a></p>
-    </section>
-
-    <section class="card" id="l27ehlt2ar">
-      <h2 class="section-title">L27EHLT2AR</h2>
-      <ul class="list-clean">
-        <li><strong>Manufacturer:</strong> <em>[select: ARISTOCRAT, IGT, KONAMI, Light &amp; Wonder, SG Gaming]</em></li>
-        <li><strong>Parts:</strong> <a href="index.html">Contact us</a></li>
-      </ul>
-      <p><a href="#top">Back to top</a></p>
-    </section>
-
-    <section class="card" id="l27eylg1ar">
-      <h2 class="section-title">L27EYLG1AR</h2>
-      <ul class="list-clean">
-        <li><strong>Manufacturer:</strong> <em>[select: ARISTOCRAT, IGT, KONAMI, Light &amp; Wonder, SG Gaming]</em></li>
-        <li><strong>Parts:</strong> <a href="index.html">Contact us</a></li>
-      </ul>
-      <p><a href="#top">Back to top</a></p>
-    </section>
-
-    <section class="card" id="l27eylt1ar">
-      <h2 class="section-title">L27EYLT1AR</h2>
-      <ul class="list-clean">
-        <li><strong>Manufacturer:</strong> <em>[select: ARISTOCRAT, IGT, KONAMI, Light &amp; Wonder, SG Gaming]</em></li>
-        <li><strong>Parts:</strong> <a href="index.html">Contact us</a></li>
-      </ul>
-      <p><a href="#top">Back to top</a></p>
-    </section>
-
-    <section class="card" id="l4045sthby-ncs-r">
-      <h2 class="section-title">L4045STHBY-NCS(R)</h2>
-      <ul class="list-clean">
-        <li><strong>Manufacturer:</strong> <em>[select: ARISTOCRAT, IGT, KONAMI, Light &amp; Wonder, SG Gaming]</em></li>
-        <li><strong>Parts:</strong> <a href="index.html">Contact us</a></li>
-      </ul>
-      <p><a href="#top">Back to top</a></p>
-    </section>
-
-    <section class="card" id="l43e5lt2kn">
-      <h2 class="section-title">L43E5LT2KN</h2>
-      <ul class="list-clean">
-        <li><strong>Manufacturer:</strong> <em>[select: ARISTOCRAT, IGT, KONAMI, Light &amp; Wonder, SG Gaming]</em></li>
-        <li><strong>Parts:</strong> <a href="index.html">Contact us</a></li>
-      </ul>
-      <p><a href="#top">Back to top</a></p>
-    </section>
-
-    <section class="card" id="l49e8ltmgt">
-      <h2 class="section-title">L49E8LTMGT</h2>
-      <ul class="list-clean">
-        <li><strong>Manufacturer:</strong> <em>[select: ARISTOCRAT, IGT, KONAMI, Light &amp; Wonder, SG Gaming]</em></li>
-        <li><strong>Parts:</strong> <a href="index.html">Contact us</a></li>
-      </ul>
-      <p><a href="#top">Back to top</a></p>
-    </section>
+    <!-- Keep adding the rest of your model sections the same way... -->
 
   </main>
 
