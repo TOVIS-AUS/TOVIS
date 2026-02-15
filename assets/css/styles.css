@@ -1,94 +1,163 @@
-/* Minimal, fast, SEO-friendly styling (no frameworks) */
-:root { --max: 1100px; }
-
-* { box-sizing: border-box; }
-
-html, body { margin: 0; padding: 0; }
-
-body {
-  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
-  line-height: 1.55;
-  color: #111;
-  background: #fff;
+:root{
+  --bg:#0b0f17;
+  --card:#0f1624;
+  --text:#e8eefc;
+  --muted:#a7b4d6;
+  --line:rgba(255,255,255,.12);
+  --brand:#5eead4;
+  --brand2:#60a5fa;
+  --shadow: 0 12px 30px rgba(0,0,0,.35);
+  --radius:16px;
+  --max: 1120px;
 }
 
-a { color: inherit; text-decoration: underline; }
-a:hover { text-decoration-thickness: 3px; }
-
-header { border-bottom: 1px solid #eee; }
-
-.container {
-  max-width: var(--max);
-  margin: 0 auto;
-  padding: 18px 16px;
+*{box-sizing:border-box}
+html,body{margin:0;padding:0}
+body{
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
+  background: radial-gradient(1200px 600px at 20% 0%, rgba(96,165,250,.16), transparent 55%),
+              radial-gradient(1200px 600px at 80% 0%, rgba(94,234,212,.12), transparent 55%),
+              var(--bg);
+  color:var(--text);
+  line-height:1.6;
 }
 
-/* Logo-only brand */
-.brand { display: flex; align-items: center; }
-.brand img { height: 64px; width: auto; display: block; }
+a{color:inherit}
+.container{max-width:var(--max);margin:0 auto;padding:0 18px}
+.small{font-size:.95rem}
+.muted{color:var(--muted)}
+.hr{height:1px;background:var(--line);margin:22px 0}
 
-nav { margin-top: 12px; }
-nav a { margin-right: 14px; text-decoration: none; font-weight: 600; }
-nav a[aria-current="page"] { text-decoration: underline; }
-
-main h1 { font-size: 1.8rem; margin: 18px 0 8px; }
-main h2 { font-size: 1.25rem; margin: 26px 0 8px; }
-
-small, .muted { color: #555; }
-
-.grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-  gap: 16px;
+header{
+  position:sticky;top:0;z-index:50;
+  background: rgba(11,15,23,.78);
+  backdrop-filter: blur(12px);
+  border-bottom:1px solid var(--line);
+}
+.nav{
+  display:flex;align-items:center;justify-content:space-between;
+  padding:14px 0;
+}
+.brand{
+  display:flex;gap:10px;align-items:center;text-decoration:none;
+}
+.badge{
+  width:34px;height:34px;border-radius:10px;
+  background: linear-gradient(135deg, rgba(94,234,212,.9), rgba(96,165,250,.9));
+  box-shadow: var(--shadow);
+}
+.brand strong{letter-spacing:.3px}
+.navlinks{display:flex;gap:14px;flex-wrap:wrap}
+.navlinks a{
+  text-decoration:none;
+  color:var(--muted);
+  padding:8px 10px;border-radius:12px;
+  border:1px solid transparent;
+}
+.navlinks a:hover{
+  color:var(--text);
+  border-color:var(--line);
+  background: rgba(255,255,255,.03);
 }
 
-/* Card (grey box) */
-.card {
-  border: 1px solid #eee;
-  border-radius: 10px;
-  padding: 12px;
-  background: #fafafa;
+.hero{padding:52px 0 18px}
+.hero h1{
+  margin:0 0 10px;
+  font-size: clamp(1.8rem, 3.3vw, 3rem);
+  line-height:1.15;
+}
+.hero p{margin:0 0 14px;color:var(--muted);max-width:72ch}
+
+.cta{display:flex;gap:12px;flex-wrap:wrap;margin-top:12px}
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;
+  padding:10px 14px;border-radius:14px;
+  border:1px solid var(--line);
+  text-decoration:none;
+  background: rgba(255,255,255,.03);
+}
+.btn:hover{background: rgba(255,255,255,.06)}
+.btn.primary{
+  border-color: transparent;
+  background: linear-gradient(135deg, rgba(94,234,212,.25), rgba(96,165,250,.25));
 }
 
-/* Space between stacked cards (About page etc.) */
-main > .card,
-main section.card {
-  margin: 0 0 16px 0;
+.grid{
+  display:grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap:14px;
+  padding: 14px 0 40px;
+}
+.card{
+  grid-column: span 12;
+  background: rgba(15,22,36,.72);
+  border:1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 16px;
+  box-shadow: var(--shadow);
+}
+.card h2,.card h3{margin:0 0 8px}
+.card p{margin:8px 0;color:var(--muted)}
+@media(min-width: 860px){
+  .span6{grid-column: span 6}
+  .span4{grid-column: span 4}
+  .span8{grid-column: span 8}
 }
 
-/* Avoid double spacing inside grid (grid already uses gap) */
-.grid .card { margin-bottom: 0; }
-
-/* Dots -> ticks (only for list-clean lists) */
-.list-clean {
-  list-style: none;
-  margin: 0;
-  padding-left: 0;
+.kv{display:flex;gap:10px;flex-wrap:wrap;margin-top:10px}
+.pill{
+  font-size:.9rem;
+  padding:6px 10px;border-radius:999px;
+  border:1px solid var(--line);
+  background: rgba(255,255,255,.03);
+  color: var(--muted);
 }
 
-.list-clean li {
-  position: relative;
-  padding-left: 26px;
-  margin: 6px 0;
+.searchbar{
+  display:flex;gap:10px;flex-wrap:wrap;align-items:center;
+  margin-top:10px;
+}
+input[type="search"]{
+  width:min(520px, 100%);
+  padding:10px 12px;
+  border-radius:14px;
+  border:1px solid var(--line);
+  background: rgba(255,255,255,.03);
+  color: var(--text);
+  outline:none;
+}
+input[type="search"]::placeholder{color:rgba(167,180,214,.75)}
+
+.model-list{
+  list-style:none;padding:0;margin:10px 0 0;
+  display:grid;
+  grid-template-columns: repeat(2, minmax(0,1fr));
+  gap:10px 12px;
+}
+@media(min-width: 860px){
+  .model-list{grid-template-columns: repeat(4, minmax(0,1fr))}
+}
+.model-list a{
+  text-decoration:none;
+  display:flex;align-items:center;justify-content:center;
+  padding:10px 10px;border-radius:14px;
+  border:1px solid var(--line);
+  background: rgba(255,255,255,.02);
+}
+.model-list a:hover{
+  background: rgba(255,255,255,.06);
+  border-color: rgba(94,234,212,.35);
+}
+code{
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  font-size:.95rem;
 }
 
-.list-clean li::before {
-  content: "✓";
-  position: absolute;
-  left: 0;
-  top: 0;
-  font-weight: 800;
+footer{
+  border-top:1px solid var(--line);
+  padding:22px 0 30px;
+  color: var(--muted);
 }
-
-/* Model index columns */
-.anchor-index { columns: 2; column-gap: 22px; }
-@media (max-width: 640px) { .anchor-index { columns: 1; } }
-
-footer { border-top: 1px solid #eee; margin-top: 28px; }
-
-/* OPTIONAL: For bigger “TOVIS” and higher position inside a card.
-   Use in about.html: <h2 class="section-title">TOVIS</h2> */
-.section-title {
-  font-size: 1.6rem;
-  margin: 0 0 10px 0; /* remove top margin so it sits higher */
+.footerline{
+  display:flex;gap:10px;flex-wrap:wrap;align-items:center;justify-content:space-between
 }
