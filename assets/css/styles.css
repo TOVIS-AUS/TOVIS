@@ -159,7 +159,7 @@ h1{
 }
 .list-clean li{margin:6px 0}
 
-/* Numbered list that looks professional */
+/* Numbered list that looks professional (FIXED ALIGNMENT) */
 .pro-ol{
   counter-reset:item;
   list-style:none;
@@ -172,27 +172,30 @@ h1{
 @media(min-width: 860px){
   .pro-ol{grid-template-columns:1fr 1fr;}
 }
+
 .pro-ol li{
-  display:flex;
-  gap:12px;
-  align-items:flex-start;
+  display:grid;
+  grid-template-columns: 32px 1fr;
+  column-gap:12px;
+  align-items:center;              /* aligns number with text baseline nicely */
   padding:12px;
   border:1px solid var(--border);
   border-radius:12px;
   background:#fbfdff;
 }
+
 .pro-ol li::before{
   counter-increment:item;
   content: counter(item);
-  min-width:32px;
+  width:32px;
   height:32px;
-  display:inline-flex;
-  align-items:center;
-  justify-content:center;
+  display:grid;
+  place-items:center;
   border-radius:999px;
   border:1px solid var(--border2);
   background:#ffffff;
   font-weight:900;
+  line-height:1;                   /* prevents vertical drift */
 }
 
 /* Value Proposition list */
